@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping("/jobs")
 public class JobRestAPI {
 
-    private String hello = "Hello, I'm the Job MS 4SAE6";
+    private String hello = "Hello, I'm the Job MS 4SAE8";
 
     @RequestMapping("/helloJ")
     public String sayHello() {
