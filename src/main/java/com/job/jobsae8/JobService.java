@@ -13,7 +13,9 @@ public class JobService {
     public Job addJob(Job job) {
         return jobRepository.save(job);
     }
-
+    public Job getJobById(int id) {
+        return jobRepository.findById(id).orElse(null);
+    }
     public List<Job> getAll(){
         return jobRepository.findAll();
     }

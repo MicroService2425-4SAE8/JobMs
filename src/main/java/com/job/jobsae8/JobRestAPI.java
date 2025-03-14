@@ -21,7 +21,10 @@ public class JobRestAPI {
     @Autowired
     private JobService jobService;
 
-
+    @GetMapping("/{id}")
+    public ResponseEntity<Job> getJobById(@PathVariable("id") int id    ) {
+        return new ResponseEntity<>(jobService.getJobById(id), HttpStatus.OK);
+    }
     @GetMapping
     public ResponseEntity<List<Job>> getAll() {
         return new ResponseEntity<>(jobService.getAll(), HttpStatus.OK);
